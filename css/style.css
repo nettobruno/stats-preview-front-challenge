@@ -1,0 +1,108 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+/* Resetando */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+
+/* Inicio do desenvolvimento */
+div#container {
+  background-color: hsl(233, 47%, 7%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+div#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+}
+
+div#content div#texts {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: hsl(244, 38%, 16%);
+  padding: 100px 50px;
+}
+
+div#content div#texts h1 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+div#content div#texts h1 span {
+  color: rgba(170,92,219,.7);
+}
+
+div#content div#texts > p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 60px;
+  width: 55%;
+}
+
+div#content div#info {
+  display: flex;
+  align-items: center;
+}
+
+div#content div#info .item {
+  margin-right: 40px;
+}
+
+div#content div#info .item h3{
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+div#content div#info .item p{
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: .7em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+div#content div#image {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background:linear-gradient(
+    rgba(170,92,219,.7),rgba(170,92,219,.7)
+  ),  url('../images/image-header-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/* Responsividade */
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
+@media(max-width: 1550px) {}
