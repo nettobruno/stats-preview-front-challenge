@@ -1,6 +1,5 @@
 /* Importação de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 /* Resetando */
 * {
@@ -12,11 +11,10 @@
   -webkit-font-smoothing: antialiased !important;
 }
 
-
 /* Inicio do desenvolvimento */
 div#container {
   background-color: hsl(233, 47%, 7%);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +37,7 @@ div#content div#texts {
 
 div#content div#texts h1 {
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 20px;
@@ -47,12 +45,12 @@ div#content div#texts h1 {
 }
 
 div#content div#texts h1 span {
-  color: rgba(170,92,219,.7);
+  color: rgba(170, 92, 219, 0.7);
 }
 
 div#content div#texts > p {
   color: hsla(0, 0%, 100%, 0.6);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: 400;
   margin-bottom: 60px;
@@ -68,17 +66,17 @@ div#content div#info .item {
   margin-right: 40px;
 }
 
-div#content div#info .item h3{
+div#content div#info .item h3 {
   color: white;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 1.2em;
   margin-bottom: 5px;
 }
 
-div#content div#info .item p{
+div#content div#info .item p {
   color: hsla(0, 0%, 100%, 0.6);
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: .7em;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -86,36 +84,51 @@ div#content div#info .item p{
 div#content div#image {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  background:linear-gradient(
-    rgba(170,92,219,.7),rgba(170,92,219,.7)
-  ),  url('../images/image-header-desktop.jpg');
+  background: linear-gradient(rgba(170, 92, 219, 0.7), rgba(170, 92, 219, 0.7)),
+    url("../images/image-header-desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media (max-width: 1395px) {
+  div#container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 
+  div#content div#texts h1 {
+    width: 90%;
+  }
 
+  div#content div#texts h1 span {
+    color: rgba(170, 92, 219, 0.7);
+  }
+
+  div#content div#texts > p {
+    width: 75%;
+  }
+}
 
 /* Responsividade */
-@media(max-width: 600px) {
+@media (max-width: 920px) {
   div#container {
-    height: 100%; 
-    padding: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
-  
+
   div#content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
   }
-  
+
   div#content div#texts:nth-of-type(1) {
-    order: 2
+    order: 2;
   }
 
   div#content div#image:nth-of-type(2) {
-    order: 1
+    order: 1;
   }
 
   div#content div#texts {
@@ -124,49 +137,55 @@ div#content div#image {
     border-top-left-radius: 0px;
     padding: 50px 10px;
   }
-  
+
   div#content div#texts h1 {
     width: 100%;
     text-align: center;
   }
-  
-  
+
   div#content div#texts > p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
-  
+
   div#content div#info {
     display: flex;
     flex-direction: column;
   }
-  
+
   div#content div#info .item {
     margin-right: 0px;
     margin-bottom: 20px;
-
   }
-  
-  div#content div#info .item h3{
+
+  div#content div#info .item h3 {
     margin-bottom: 5px;
     text-align: center;
   }
-  
-  div#content div#info .item p{
-   text-align: center;
+
+  div#content div#info .item p {
+    text-align: center;
   }
-  
+
   div#content div#image {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    background:linear-gradient(
-      rgba(170,92,219,.7),rgba(170,92,219,.7)
-    ),  url('../images/image-header-mobile.jpg');
+    background: linear-gradient(
+        rgba(170, 92, 219, 0.7),
+        rgba(170, 92, 219, 0.7)
+      ),
+      url("../images/image-header-mobile.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 600px) {
+  div#container {
+    padding: 50px 10px;
   }
 }
